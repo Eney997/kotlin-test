@@ -1,3 +1,5 @@
+import java.util.Scanner
+import javax.swing.JFrame
 
 //for 7
 const val pi = 3.14
@@ -318,11 +320,264 @@ fun main() {
 
 
     //26)ARRAYS
+    //val name:String = "Rene, Phoden"
+//    val names = arrayOf<String>("Rene","James","John")
+//    println(names[2])
+//    names[0] = "Pro chi"
+//    println(names.size)
+//    println(names.contentToString())
+//
+//    var i = 0
+//    while(i<names.size)
+//    {
+//        println(names[i])
+//        ++i
+//    }
+//
+//    if("Pro chi" in names)
+//    {
+//        println("Yes")
+//    }else println("No")
+//
+//    if(names[1].equals("James"))
+//    {
+//        println("of course")
+//    }else println("Hell na")
+
+
+//
+//    val arrayOfNull = arrayOfNulls<String>(5)
+//    arrayOfNull.fill("*")
+//    arrayOfNull[0] = "Ren"
+//    println(arrayOfNull.contentToString())
+
+
+
+    //27)LIST
+//    val names:List<String> = listOf("Rene","James","John")
+//    println(names)
+//    println(names[1])
+
+
+
+    //28)MUTABLE LIST
+//    val names = mutableListOf<String>("Rene","James","John")
+//    names.add("George")
+//    println(names)
+
+
+
+    //29)DESTRUCTURING
+//    val names = listOf("Rene","James","John")
+//
+//    val(one,_,three) = names
+//    println("$one $three")
+
+
+
+    //30)FOR LOOP
+//    val names = listOf("rene","john","pill")
+//    val numbers = intArrayOf(1,2,3,4,5)
+//
+//    for(i in names)
+//    {
+//        val f = i.replaceFirstChar {
+//            it.uppercase()
+//        }
+//        println(f)
+//    }
+//
+//    for(i in numbers) println(i)
+
+
+
+   //31)INDICES-index
+//
+//    val letters = charArrayOf('A','B','C','D','E')
+//    for (i in letters.indices)
+//    {
+//        println("$i - ${letters[i]}")
+//    }
+//
+//    for (i in letters.indices.reversed())
+//    {
+//        println("$i - ${letters[i]}")
+//    }
+
+
+
+    //32)RANGE DOWN TO AND STEP
+
+//    val numbers = arrayOf<Int>(1,2,3,4,5)
+//
+//    for (i in 1..numbers.size) println(i)
+//    for (i in numbers.size downTo 1) println(i)
+//    for(i in 1 .. numbers.size step 3) println(i)
+//    for(i in numbers.size downTo 1) println(i)
+
+
+
+    //33)LOOP THROUGH STRING
+//
+//    val brand = "Adidas"
+//    for(l in brand)
+//    {
+//        println(l)
+//    }
+
+
+    //34)FOREACH
+//
+//    val names = listOf("Rene","John","Mike","Thom")
+//
+//    names.forEach{
+//        println(it)
+//    }
+
+
+
+
+    //35)WHILE LOOP
+//    var number = 1;
+//
+//    while( number <= 5 )
+//    {
+//        println(number)
+//        ++number
+//    }
+//
+//    var brand = "Adidas"
+//    var i = brand.length-1
+//
+//    while(i >= 0 )
+//    {
+//        println(brand[i])
+//        --i
+//    }
+
+
+
+
+    //36)DO WHILE
+//    do{
+//        println("hi")
+//    }while (false)
+
+
+
+    //37)BREAK AND COUNTIONE
+//
+//    val nums = intArrayOf(1,2,3,4,5,6,7,8)
+//
+//    for (n in nums)
+//    {
+//        if(n % 2 != 0) continue //skips
+//        if(n > 6) break
+//        println(n)
+//    }
+
+
+
+    //38)FUNCTION
+//    sayHello()
+
+
+
+    //39)PARAMETERS AND ARGUMENTS
+//    greet("Rene",24)
+
+
+
+
+    //40)NAMED ARGUMENTS
+//    greet(age=24, name = "Rene")
+
+
+
+    //41)DEFAULT ARGUMENTS
+//    nameAndAge("Rene")
+//    nameAndAge(age = 12)
+//    nameAndAge("Rene",25)
+
+
+
+
+    //42)FUNCTIONS AS ARGUMENTS
+//
+//    foo (bar = {
+//        println("Boom Boom")
+//    })
+//
+//    foo {
+//        println("Bar as function 2 ")
+//    }
+//
+//    foo()
+
+
+
+    //43)RETURN VALUE FROM FUN
+//    println(sqr(5))
+
+
+
+
+    //44)SINGLE EXPRESSION FUNCTIONS
+    
+
+
+
+
+
 
 
 
 }
 
+fun sqr(num:Int):Int
+{
+    return num*num
+}
+
+
+
+fun foo(name:String = "",bar: () -> Unit = {})
+{
+    println("Bar function")
+    bar()
+}
+
+
+
+
+fun nameAndAge(name:String = "",age:Int = -1)
+{
+    if(age == -1)
+    {
+        println("Age is not provided.")
+        return
+    }
+    if (name == "")
+    {
+        println("Name is not provided")
+        return
+    }
+    else println("Hello $name,You are $age years old.")
+}
+
+
+
+fun greet(name:String,age:Int)
+{
+    println("Hello my name is $name,Im $age years old.")
+}
+
+
+
+fun sayHello():Unit
+{
+    println("hello")
+}
 
 
 
